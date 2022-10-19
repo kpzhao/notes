@@ -1,4 +1,6 @@
 # sway
+	- ## mpv
+	-
 - ## app
   |program | name|
   |---| ---|
@@ -154,11 +156,11 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 nvim /etc/modprobe.d/intel.conf
 options i915 enable_psr=0
 ```
-## obsidian hidpi
-```
- sudo nvim /usr/share/applications/obsidian.desktop
- --force-device-scale-factor=2
-```
+- ## obsidian hidpi
+  ```
+   cp /usr/share/applications/obsidian.desktop
+   env=XCURSOR_SIZE=48 --force-device-scale-factor=2
+  ```
 - ## timeshift
   要手动启动
 - ```

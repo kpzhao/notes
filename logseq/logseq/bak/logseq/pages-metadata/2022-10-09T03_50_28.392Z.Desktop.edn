@@ -24,7 +24,7 @@
   :block/updated-at 1662295604895}
  {:block/name "command",
   :block/created-at 1662295182207,
-  :block/updated-at 1665810699526}
+  :block/updated-at 1662714947851}
  {:block/name "contents",
   :block/created-at 1662295604895,
   :block/updated-at 1662295604895}
@@ -51,31 +51,16 @@
   :block/updated-at 1662344534830}
  {:block/name "naiveproxy",
   :block/created-at 1662365586580,
-  :block/updated-at 1665763200753}
+  :block/updated-at 1662734172170}
  {:block/name "now",
   :block/created-at 1662295604895,
   :block/updated-at 1662295604895}
- {:block/name "oct 12th, 2022",
-  :block/created-at 1665546669682,
-  :block/updated-at 1665546669682}
- {:block/name "oct 13th, 2022",
-  :block/created-at 1665590404610,
-  :block/updated-at 1665590404610}
- {:block/name "oct 14th, 2022",
-  :block/created-at 1665712155828,
-  :block/updated-at 1665712155828}
- {:block/name "oct 15th, 2022",
-  :block/created-at 1665763200716,
-  :block/updated-at 1665763200716}
- {:block/name "oct 16th, 2022",
-  :block/created-at 1665904403830,
-  :block/updated-at 1665904403830}
- {:block/name "oct 19th, 2022",
-  :block/created-at 1666158524909,
-  :block/updated-at 1666158524909}
- {:block/name "oct 9th, 2022",
-  :block/created-at 1665287418906,
-  :block/updated-at 1665287421432}
+ {:block/name "oct 3rd, 2022",
+  :block/created-at 1664796739963,
+  :block/updated-at 1664796739963}
+ {:block/name "oct 4th, 2022",
+  :block/created-at 1664844856540,
+  :block/updated-at 1664844856540}
  {:block/name "openwrt",
   :block/created-at 1663681417848,
   :block/updated-at 1663922965605}
@@ -124,9 +109,6 @@
  {:block/name "sep 9th, 2022",
   :block/created-at 1662684197681,
   :block/updated-at 1662684197681}
- {:block/name "smartdns",
-  :block/created-at 1666158534365,
-  :block/updated-at 1666161288908}
  {:block/name "sway",
   :block/created-at 1662295182284,
   :block/updated-at 1662898180734}
@@ -146,17 +128,5 @@
   :block/created-at 1662295604895,
   :block/updated-at 1662295604895}
  {:block/name "win10+arch install",
-  :block/created-at 1662295182423,
-  :block/updated-at 1665578333079}
- {:block/name "编辑",
-  :block/created-at 1666161048878,
-  :block/updated-at 1666161048878}
- {:block/name "编辑/etc",
-  :block/created-at 1666161048879,
-  :block/updated-at 1666161048879}
- {:block/name "编辑/etc/smartdns",
-  :block/created-at 1666161048879,
-  :block/updated-at 1666161048879}
- {:block/name "编辑/etc/smartdns/smartdns.conf",
-  :block/created-at 1666161048877, 
-  :block/updated-at 1666161048877}]
+  :block/created-at 1662295182423, 
+  :block/updated-at 1662295182423}]

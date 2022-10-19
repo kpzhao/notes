@@ -20,7 +20,9 @@
   ```
 - ## tar
 - 1. 使用tar压缩文件
-- tar -zcvf test.tar.gz ./test/
+  ```
+  tar -zcvf test.tar.gz ./test/  
+  ```
 - 该命令表示压缩当前文件夹下的文件夹test，压缩后缀名为test.tar.gz
 - 如果不需要压缩成gz，只需要后缀为tar格式的，那么输入如下命令：
 - tar -cvf test.tar ./test/
@@ -33,3 +35,7 @@
 - ————————————————
   版权声明：本文为CSDN博主「易大飞」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
   原文链接：https://blog.csdn.net/stf1065716904/article/details/81909320
+- ## 查看端口被占用
+  ```
+   sudo netstat -nplt
+  ```

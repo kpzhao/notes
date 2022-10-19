@@ -74,18 +74,7 @@
   :LOGBOOK:
   CLOCK: [2022-09-05 Mon 16:15:07]--[2022-09-05 Mon 16:15:10] =>  00:00:03
   :END:
-	- ## 临时禁用
-	  command
-	  ```
-	  sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-	  sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-	  sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
-	  ```
-	  查看, 1为禁用
-	  ```
-	  cat /proc/sys/net/ipv6/conf/all/disable_ipv6
-	  ```
-	  重启恢复
+	- cat /proc/sys/net/ipv6/conf/all/disable_ipv6
 	- ##永久生效
 	  ```
 	  sudo vim /etc/sysctl.conf
