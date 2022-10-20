@@ -4,27 +4,26 @@
   sudo pacman -S smartdns-china-list-git
   ```
 - ## 配置
-  collapsed:: true
 	- ### 编辑/etc/smartdns/smartdns.conf
 	  ```
-	  # bind 监听 指定 IP/端口 的 UDP 查询请求
-	  # bind-tcp 监听 指定 IP/端口 的 TCP 查询请求
-	  bind [::]:53
-	  
-	  # 载入 ChinaList
+	  # （可选）引入额外的规则列表，用绝对路径
 	  conf-file /etc/smartdns/accelerated-domains.china.smartdns.conf
 	  conf-file /etc/smartdns/apple.china.smartdns.conf
 	  conf-file /etc/smartdns/google.china.smartdns.conf
+	  conf-file /etc/smartdns/ad.conf
 	  
-	  # 最大缓存域名个数：16384
-	  cache-size 16384
-	  # 强制启用缓存
+	  # 本地监听端口
+	  bind [::]:53
+	  
+	  # 缓存大小
+	  cache-size 4096
+	  
+	  # 重启时读取之前的缓存
 	  cache-persist yes
-	  # 缓存文件路径
-	  cache-file /tmp/smartdns.cache
 	  
-	  # 日志级别：信息
-	  log-level info
+	  # 缓存文件存放位置
+	  cache-file /var/cache/smartdns.cache
+	  
 	  # 最大返回 IP 个数
 	  max-reply-ip-num 16
 	  # 预请求域名：缓存预热。加速解析速度，优化用户体验。
@@ -37,40 +36,25 @@
 	  # SmartDNS 允许您指定多个 DNS 上游，并智能选择最快的进行查询服务。
 	  speed-check-mode tcp:443,ping
 	  
-	  # 阿里上游服务器
-	  server 223.5.5.5 -group china -exclude-default-group
-	  server 223.6.6.6 -group china -exclude-default-group
-	  server 2400:3200::1 -group china -exclude-default-group
-	  server 2400:3200:baba::1 -group china -exclude-default-group
+	  # 传统 UDP 协议（以阿里 DNS 为例）
+	  #server 223.5.5.5
 	  
-	  # 腾讯上游服务器
-	  server 119.29.29.29 -group china -exclude-default-group
-	  server 2402:4e00:: -group china -exclude-default-group
-	  server 2402:4e00:1:: -group china -exclude-default-group
+	  # DNS Over TLS （以 CloudFlare DNS 为例）
+	  #server-tls 1.0.0.1
 	  
-	  # 南京信风上游服务器
+	  # DNS Over Https (以烧饼 DNS 为例)
+	  #server-https https://doh.dns.sb/dns-query -group china -group example
+	  
 	  server 114.114.114.114 -group china -exclude-default-group
-	  server 114.114.115.115 -group china -exclude-default-group
+	  server-https https://223.5.5.5/dns-query -group china -exclude-default-group
+	  server-tls dns.pub -group china -exclude-default-group
 	  
-	  # SB DNS
-	  server 185.222.222.222
-	  server 185.184.222.222
-	  # Cloudflare DNS
+	  server 8.8.8.8
 	  server 1.1.1.1
-	  server 1.0.0.1
-	  
-	  # IQDNS
-	  server-https https://i.passcloud.xyz/dns-query
-	  server-https https://a.passcloud.xyz/dns-query
-	  server-https https://a.passcloud.xyz/hk
-	  server-https https://a.passcloud.xyz/am
-	  server-https https://a.passcloud.xyz/us
-	  server-https https://a.passcloud.xyz/sz
-	  
-	  # 不知道为什么，这个地址只会返回 127.0.0.0。
-	  # 手动指定 localhost 的 IP 为 ::1
-	  address /localhost/[::1] 
+	  server 74.82.42.42
+	  server-https https://doh.dns.sb/dns-query 
 	  ```
+	-
 	- ### 阻止其他程序再次修改 /etc/resolv.conf （通常是在说 NetworkManager）
 	  你可以通过创建并编辑 /etc/NetworkManager/conf.d/01-dns.conf 文件，并写入以下内容来实现。
 	  ```
