@@ -25,9 +25,6 @@
  {:block/name "contents",
   :block/created-at 1662295604895,
   :block/updated-at 1662295604895}
- {:block/name "dec 1st, 2022",
-  :block/created-at 1669858922668,
-  :block/updated-at 1669858922668}
  {:block/name "doing",
   :block/created-at 1662295604895,
   :block/updated-at 1662295604895}
@@ -70,15 +67,9 @@
  {:block/name "nov 26th, 2022",
   :block/created-at 1669472404096,
   :block/updated-at 1669472404096}
- {:block/name "nov 29th, 2022",
-  :block/created-at 1669696865585,
-  :block/updated-at 1669696865585}
  {:block/name "nov 2nd, 2022",
   :block/created-at 1667354571766,
   :block/updated-at 1667354571766}
- {:block/name "nov 30th, 2022",
-  :block/created-at 1669737600465,
-  :block/updated-at 1669737600465}
  {:block/name "nov 3rd, 2022",
   :block/created-at 1667455265209,
   :block/updated-at 1667455265209}
@@ -163,9 +154,6 @@
  {:block/name "win10+arch install",
   :block/created-at 1662295182423,
   :block/updated-at 1665578333079}
- {:block/name "概念",
-  :block/created-at 1669883285365,
-  :block/updated-at 1669883285365}
  {:block/name "行测",
   :block/created-at 1667718312644, 
-  :block/updated-at 1669883923921}]
+  :block/updated-at 1667808239552}]

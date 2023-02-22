@@ -52,26 +52,30 @@ options btusb enable_autosuspend=n
 ```
 sudo pacman -S waybar otf-font-awesome
 ```
-## 截屏
-```
-sudo pacman -S grim slurp
-```
+- ## 截屏
+  ```
+  sudo pacman -S grim slurp swappy
+  ```
 ## 配置背光
 ```
 sudo pacman -S brightnessctl
 ```
-## 配置输入法
-```
-sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-moegirl fcitx5-material-color
-```
-设置环境变量
-```
-INPUT_METHOD DEFAULT=fcitx5
-GTK_IM_MODULE DEFAULT=fcitx5
-QT_IM_MODULE DEFAULT=fcitx5
-XMODIFIERS DEFAULT=\@im=fcitx5
-SDL_IM_MODULE DEFAULT=fcitx
-```
+- ## 配置输入法
+  ```
+  sudo pacman -S fcitx5-im \
+  fcitx5-chinese-addons \
+  fcitx5-pinyin-moegirl \
+  fcitx5-material-color \
+  fcitx5-lua
+  ```
+  设置环境变量
+  ```
+  INPUT_METHOD DEFAULT=fcitx5
+  GTK_IM_MODULE DEFAULT=fcitx5
+  QT_IM_MODULE DEFAULT=fcitx5
+  XMODIFIERS DEFAULT=\@im=fcitx5
+  SDL_IM_MODULE DEFAULT=fcitx
+  ```
 ## vaapi
 ```
 intel-media-driver libva-utils intel-gpu-tools
@@ -80,13 +84,24 @@ intel-media-driver libva-utils intel-gpu-tools
 中文包 `firefox-i18n-zh-cn`
 ### Hardware video acceleration
 Set `media.ffmpeg.vaapi.enabled` to `true` in `about:config`
-### custom css
-Set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` in `about:config`
+- ### custom css
+  Set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` in `about:config`
+  browser.uidensity 设置为 1
 ## thunar
 ```
 /usr/bin/foot nvim %f
 install catfish, then catfish --path=%f
 ```
+- ## lf
+	- ## apps
+	  ````
+	  sudo pacman -S trash-cli \
+	  dragon-drop \
+	  ripgrep \
+	  ```
+	-
+	- ```
+	  ```
 ## scrcpy
 ```
 connect usb

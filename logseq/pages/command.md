@@ -39,3 +39,7 @@
   ```
    sudo netstat -nplt
   ```
+- ## 输出重定向
+  ```
+  > /dev/null 2>&1
+  ```

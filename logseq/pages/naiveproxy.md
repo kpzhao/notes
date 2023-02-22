@@ -75,7 +75,7 @@
   CLOCK: [2022-09-05 Mon 16:15:07]--[2022-09-05 Mon 16:15:10] =>  00:00:03
   :END:
 	- cat /proc/sys/net/ipv6/conf/all/disable_ipv6
-	- ##永久生效
+	- ## 永久生效
 	  ```
 	  sudo vim /etc/sysctl.conf
 	  net.ipv6.conf.all.disable_ipv6=1
