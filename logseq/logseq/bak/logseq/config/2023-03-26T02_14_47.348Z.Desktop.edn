@@ -283,8 +283,7 @@
  ;; Ignore these files when syncing, regexp is supported.
  :file-sync/ignore-files [".DS_Store$"]
  :feature/enable-flashcards? false
- :feature/enable-journals? true
- :default-home {}
+ :feature/enable-journals? false
 
  ;; dwim (do what I mean) for Enter key when editing.
  ;; Context-awareness of Enter key makes editing more easily

@@ -1,5 +1,5 @@
 # sway
-	- ## mpv
+- ## mpv
 	-
 - ## app
   |program | name|
@@ -99,19 +99,21 @@ install catfish, then catfish --path=%f
 	  dragon-drop \
 	  ripgrep \
 	  ```
-	-
-	- ```
-	  ```
-## scrcpy
-```
-connect usb
-adb tcpip 5555
-```
-拔掉usb
-```
-adb connect 10.10.5.169:5555
-scrcpy
-```
+- ## rsync
+  注意source后面的` / `
+- ```
+  rsync --archive --delete --dry-run --verbose source distination
+  ```
+- ## scrcpy
+  ```
+  connect usb
+  adb tcpip 5555
+  ```
+  拔掉usb
+  ```
+  adb connect 10.10.5.169:5555
+  scrcpy
+  ```
 ## samba
 Install the samba and  smbclient gvfs-smb package
 编辑/etc/samba/smb.conf
@@ -156,6 +158,10 @@ smb://127.0.0.1
 - ## wine for wechat
   ```
   sudo pacman -S wine-for-wechat wine-wechat-setup
+  ```
+- ## wf-recorder
+  ```
+  wf-recorder --audio --file=recording_with_audio.webm
   ```
 ## issues
 ### Polkit authorisation for GUI apps
