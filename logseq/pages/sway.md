@@ -64,8 +64,10 @@ sudo pacman -S brightnessctl
   ```
   sudo pacman -S fcitx5-im \
   fcitx5-chinese-addons \
+  fcitx5-pinyin-zhwiki \
   fcitx5-pinyin-moegirl \
   fcitx5-material-color \
+  fcitx5-configtool \
   fcitx5-lua
   ```
   设置环境变量
@@ -99,6 +101,18 @@ install catfish, then catfish --path=%f
 	  dragon-drop \
 	  ripgrep \
 	  ```
+- ## proxy
+	- ## 代理
+		- ```
+		  export all_proxy=socks5h://127.0.0.1:10800 \
+		         http_proxy=socks5h://127.0.0.1:10800 \
+		         https_proxy=socks5h://127.0.0.1:10800
+		  ```
+	- ### electron应用
+		- ```
+		  --proxy-server=socks5://127.0.0.1:10800
+		  ```
+	-
 - ## rsync
   注意source后面的` / `
 - ```
@@ -177,6 +191,10 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 nvim /etc/modprobe.d/intel.conf
 options i915 enable_psr=0
 ```
+- ### 键盘断连暂时解决办法
+  ```
+  usbcore.autosuspend=-1
+  ```
 - ## obsidian hidpi
   ```
    cp /usr/share/applications/obsidian.desktop

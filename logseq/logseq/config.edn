@@ -285,6 +285,7 @@
  :feature/enable-flashcards? false
  :feature/enable-journals? true
  :default-home {}
+ :feature/enable-whiteboards? true
 
  ;; dwim (do what I mean) for Enter key when editing.
  ;; Context-awareness of Enter key makes editing more easily
